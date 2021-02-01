@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("assam.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Rowriah Airport");
+                if(r==true)
+                {
+                window.location.replace("form_kaziranga.html")
+                }
+                else
+                {
+                window.location.replace("kaziranga.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:70%; margin-top:40px;">Kaziranga</h1></center>
+             
+            
+            <br><h3 style="margin-left:56%; margin-top:120px;">One of the greatest wildlife emblems of the country, 
+                <br>the UNESCO World Heritage Site of Kaziranga National 
+                <br>Park, is famed as a home to two-thirds of the world's 
+                <br>population of the rare one-horned rhinoceros. With the 
+                <br>mighty Brahmaputra river lapping at the fringes, the 
+                <br>park encompasses wetlands, forests and grasslands, 
+                <br>which shelter a sizeable population of tigers as well. 
+                <br>Moreover, the park is an abode of world-famous snakes-
+                <br>the rock python, the reticulated python and the king 
+                <br>cobra, the longest venomous snake. While eastern swamp 
+                <br>deer and wild water buffalo are common sights, if you're 
+                <br>lucky, you can also spot a herd of elephants making their 
+                <br>way grandly through the park. The park is surrounded by 
+                <br>ancient temples, pristine waterfalls and lush tea estates.</h3>
+                <img src="kaz.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 180px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Manas National Park
+                <br>Orang National Park
+                <br>Orchid and Biodiversity Park
+                <br>Kakochang Falls
+                <br>Hoollongapar Gibbon Sanctuary
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1gKks2regjNLcK4PBNqBYrud-vzWGFWPn" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

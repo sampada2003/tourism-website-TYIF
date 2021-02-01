@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("tamil_nadu.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Trivandrum Airport");
+                if(r==true)
+                {
+                window.location.replace("form_kanyakumari.html")
+                }
+                else
+                {
+                window.location.replace("kanyakumari.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:68%; margin-top:40px;">Kanyakumari</h1></center>
+            <br><h3 style="margin-left:58%; margin-top:120px;">Ensconced in the southern fringes of Tamil Nadu, 
+                <br>Kanyakumari is unique in that the celestial 
+                <br>happenstance of sunset and moonrise can be seen 
+                <br>simultaneously.Boasting gems of natural wonders 
+                <br>and historical monuments, the city of Kanyakumari 
+                <br>enthrals one with its beauty and solitude. A large 
+                <br>number of visitors arrive in Kanyakumari for its 
+                <br>pristine and beautiful beaches. The locals relish 
+                <br>seafood delicacies though South India dishes like 
+                <br>dosas, idlis, vadas and utthapams are equally popular.</h3>
+                <img src="kan.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 100px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Kanyakumari Beach
+                <br>Vivekananda Rock Memorial
+                <br>Thiruvalluvar Statue
+                <br>Sarvani Shaktipeeth Shri Bhagavathy Temple
+                <br>Sunset View Point
+                <br><br><br>Day 2:
+                <br>Vattakottai Fort
+                <br>Sree Thanumalayan Temple
+                <br>Padmanabhapuram Palace
+                <br>Mathur Aqueduct
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=16R33C3_8sKTrqEfXSY17LxJghLNqEctP" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

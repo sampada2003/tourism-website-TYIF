@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("jammu_and_kashmir.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Srinagar Airport");
+                if(r==true)
+                {
+                window.location.replace("form_gulmarg.html")
+                }
+                else
+                {
+                window.location.replace("gulmarg.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:71%; margin-top:40px;">Gulmarg</h1></center>
+            
+            
+            
+            
+            <br><h3 style="margin-left:59%; margin-top:120px;">With rolling green meadows carpeted by   
+                <br>bushes of wild flowers blending into 
+                <br>snow-clad mountains, whose peaks peep 
+                <br>into the clouds, and mountain streams 
+                <br>rushing by, Gulmarg is sheer poetry in 
+                <br>nature. While this is the summer 
+                <br>landscape of this tiny hamlet in Jammu 
+                <br>and Kashmir, in winter, it is transformed 
+                <br>into a white wonderland, with skiers 
+                <br>making a beeline for its famous slopes. 
+                <br>The scenic valley of Gulmarg is a little
+                <br>piece of paradise cocooned by the mighty 
+                <br>snow-clad mountains of the Pir Panjal range.</h3>
+                <img src="gul.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 180px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Afarwat
+                <br>Alpather Frozen Lake
+                <br>Gulmarg Gondola
+                <br>St. Mary Church
+                <br>Gulmarg Wildlife Sanctuary
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1J-gn4zjlTMim1Pueu8_HbLj100R_o8J2" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

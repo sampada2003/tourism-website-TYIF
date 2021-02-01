@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="state.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script type="text/javascript">
+         function redirect(name)
+        {
+          value=name;
+          window.location.replace(name+".html")
+        }
+
+        function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h2 style="margin-left:15% ;">Tamil Nadu</h2></center>
+                
+        <br><br><h4 style="margin-top:200px; margin-left:50px;">Tamil Nadu has all segments of Tourist attractions 
+            <br>which invite tourists. It has cerulean mountains, 
+            <br>silver waterfalls, verdant vegetation, sandy beaches, 
+            <br>mammoth monuments, timeless temples, fabulous wildlife, 
+            <br>scintillating sculptures and reverberating rural life.  
+            <br>It has picturesque spots, continuing heritage, 
+            <br>cultural confluence and aesthetic magnificence.</h4>
+            <a href="#destination"><input type="button" name="explore" value="Click To View Popular Destinations" style="margin-top:450px;"></a>
+            <center><img src="tamiln.jpg" width="90%" height="90%"></center>
+        </div>
+        <span id="destination">
+        <div class="row" style="padding-left:140px; background-color:rgb(46, 46, 46);">
+            <br><h1 style="margin-left:350px; color:aliceblue">Popular Destinations</h1>
+            <div class="column">
+                <img src="ooty.jpg" onclick="redirect(name)" name="ooty">
+                <h3>Ooty</h3>
+                <h4>Per Person=Rs.12,000</h4>  
+            </div>
+            <div class="column">
+              <img src="coimbatore.jpg" onclick="redirect(name)" name="coimbatore">
+              <h3>Coimbatore</h3>
+              <h4>Per Person=Rs.5,000</h4> 
+            </div>
+            <div class="column">
+              <img src="kanyakumari.jpg" onclick="redirect(name)" name="kanyakumari">
+              <h3>Kanyakumari</h3>
+              <h4>Per Person=Rs.7,000</h4>
+            </div>
+            </div>
+        </span>
+    </body>
+</html>

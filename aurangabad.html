@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("maharashtra.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Aurangabad Airport");
+                if(r==true)
+                {
+                window.location.replace("form_aurangabad.html")
+                }
+                else
+                {
+                window.location.replace("aurangabad.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:68%; margin-top:40px;">Aurangabad</h1></center> 
+              
+            <br><h3 style="margin-left:55%; margin-top:110px;">Named after Mughal emperor Aurangzeb, the city
+                <br>of Aurangabad is speckled with beautiful and 
+                <br>legendary monuments, a legacy of the Mughals, 
+                <br>who reigned from here in 1653. From the marvellous 
+                <br>Bibi-qa-Maqbara, a replica of the world-famous 
+                <br>Taj Mahal, to the formidable Daulatabad Fort, 
+                <br>Aurangabad is steeped in history that is evident 
+                <br>in its glorious ancient structures. 
+                <br>Lying in close proximity to the UNESCO World 
+                <br>Heritage Sites of Ajanta and Ellora Caves, 
+                <br>Aurangabad serves as a good base to explore the 
+                <br>state of Madhya Pradesh. Even though its history 
+                <br>dates back to the earliest periods of Indian 
+                <br>civilisation, its true splendour was unravelled 
+                <br>during the reign of the last great Mughal emperor,Aurangzeb. </h3>
+                <img src="au.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 120px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Bibi Ka Maqbara
+                <br>Chhatrapati Shivaji Maharaj Museum
+                <br>Siddharth Garden and Zoo
+                <br><br><br>Day 2:
+                <br>Aurangabad Caves
+                <br>Shree Ghrishneshwar Temple
+                <br>Ellora Caves 
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1UDWvl9SgYTHSmcuFm0KBeJMMY7U3QRk7" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

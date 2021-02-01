@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script type="text/javascript">
+
+        function validate()
+        {
+            with(document.form1)
+            {
+                if(n1.value.length==0 || p1.value.length==0)
+                {
+                    alert("Enter Full Details")
+                    sub.disaabled=true;
+                }
+                else
+                {
+                    alert("Login Successful")
+                    sub.disabled=false;
+                    window.location.replace("home.html")
+                }
+            }
+        }
+
+        function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+        <link rel="stylesheet" href="logincss.css">
+    </head>
+    <body>
+        <div class="container">
+            <img src="formback12.jpg">
+        <form name="form1" action="home.html" method="POST">
+            <br><h2>Login</h2>
+            <br><input type="text" name="n1" maxlength="100" size="30" placeholder="Username">
+            <br><br><input type="password" name="p1" maxlength="100" size="30" placeholder="Password">
+            <center><br><div class="image"><input type="button" name="sub" value="Login" onclick="validate()">
+            <br><input type="reset" name="reset" value="Reset"></div></center>
+            <center><div class="sign"><br><br><label>Don't have an account?</label>
+            <br><a href="signup.html">Sign Up</a></div></center>
+        </form>  
+        </div>
+    </body>
+</html>

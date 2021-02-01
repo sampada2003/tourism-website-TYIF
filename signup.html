@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script type="text/javascript">
+            function validatepass()
+        {
+            with(document.form1)
+            {
+                if(p1.value != p2.value)
+                {
+                    document.getElementById("div2").innerHTML="<br>*Password doesn't match";
+                    document.getElementById("div2").style.color="Red";
+                    document.getElementById("div2").style.fontWeight="500";
+                    sub.disabled=true;
+                }
+                else{
+                    sub.disabled=false;
+                    document.getElementById("div2").innerHTML="";
+                }
+            }
+        }
+
+        function validate()
+        {
+            with(document.form1)
+            {
+                var j=n2.value.indexOf('@')
+                var k=n2.value.indexOf('.')
+                if(n1.value.length==0||n2.value.length==0||p1.value.length==0||p2.value.length==0||j==-1||k==-1)
+                {
+                    alert("Please enter complete details")
+                }
+                else
+                {
+                    alert("Signed Up Successfully")
+                    window.location.replace("home.html")
+                }
+            }
+        }
+
+        function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+        <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <img src="formback12.jpg">
+    <form name="form1" method="POST">
+        <br><h2>Sign-Up</h2>
+        <br><input type="text" name="n1" maxlength="100" size="30" placeholder="Set Username">
+        <br><br><input type="email" name="n2" maxlength="100" size="30" placeholder="Enter E-mail ID">
+        <br><br><input type="text" name="p1" maxlength="100" size="30" placeholder="Set Password" onchange="validatepass()"><br>
+        <br><input type="text" name="p2" maxlength="100" size="30" placeholder="Confirm Password" onkeyup="validatepass()"><div id="div2" class="div2"></div>
+        <center><br><input type="button" name="sub" value="Sign Up" onclick="validate()">
+        <br><label style="margin-left: 45px;">Already have an account?</label>
+        <br><a href="login.html" style="margin-left: 45px;">Log In</a></center>
+    </form>  
+    </div>
+</body>
+</html>

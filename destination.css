@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+    color: #6c757d;
+    background-color: #FC8A17;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(46, 46, 46);
+    position: absolute; 
+    top: 0;
+    width: 100%;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: #ffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    color:rgba(255, 255, 255, 0.733);
+    transition: 0.3s ease;
+  }
+
+  ul img{
+      height: 50px;
+      width: 150px;
+      cursor: pointer;
+  }
+
+  .container{
+    background-color: rgb(46, 46, 46);
+    width: 98%;
+    height:87%;
+    margin-top: 5%;
+    margin-left:1%;
+    display:flex;
+    position: relative;
+}
+
+.container h1{
+  position: absolute; 
+  color: #FC8A17;
+}
+
+.container h3{
+  position:absolute;
+  color: white;
+}
+
+.container1{
+  background-color: rgb(46, 46, 46);
+  width: 98%;
+  height:87%;
+  margin-top: 2%;
+  margin-left:1%;
+  margin-bottom:2% ;
+  display:flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.container1 iframe{
+  display: block;
+  margin-left: auto;
+}
+
+.container1 h1{
+  position: absolute; 
+  color: #FC8A17;
+}
+
+.container1 button{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; 
+  font-size: 14;
+  position: absolute;
+  margin-top:500px;
+  width: 200px;
+  height: 40px;
+  margin-left:340px;
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom:10px ; 
+  background:aqua;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.container1 input[type='button']{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold; 
+  font-size: 14;
+  position: absolute;
+  margin-top:500px;
+  width: 200px;
+  height: 40px;
+  margin-left:90px;
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom:10px ; 
+  background:aqua;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  border-radius: 20px;
+}

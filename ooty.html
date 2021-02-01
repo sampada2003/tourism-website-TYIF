@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("tamil_nadu.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Coimbatore Airport");
+                if(r==true)
+                {
+                window.location.replace("form_ooty.html")
+                }
+                else
+                {
+                window.location.replace("ooty.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:73%; margin-top:40px;">Ooty</h1></center>
+             
+            
+            <br><h3 style="margin-left:60%; margin-top:120px;">A quaint hill town, perched against the 
+                <br>backdrop of Doddabetta (2,637 m), the 
+                <br>highest peak in the Nilgiris, Ootacamund, 
+                <br>in Tamil Nadu, is lined with traditional 
+                <br>and colonial-style buildings, which make 
+                <br>it the perfect fusion of the new and the
+                <br>old. Clear blue skies, lush green hills, 
+                <br>deep verdant valleys and pleasant weather 
+                <br>culminate to make this gem of the Nilgiris 
+                <br>(Blue Mountains) one of the most attractive 
+                <br>tourist destinations in South India.  
+                <br>Such is the renown of its beauty that it is 
+                <br>popularly referred to as the 'Queen of Hill 
+                <br>Stations' and the 'Switzerland of India'.</h3>
+                <img src="oot.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 100px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Doddabetta Peak
+                <br>Stone House
+                <br>St. Stephen's Church
+                <br>Rose garden
+                <br>Toy Train Ooty
+                <br><br><br>Day 2:
+                <br>Ooty Lake
+                <br>Kalhatti Falls
+                <br>Pykara waterfalls
+                <br>Needle Rock View Point
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=184QRxPJhWIfkq6u7mV4gMCXMl1jFk-iA" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

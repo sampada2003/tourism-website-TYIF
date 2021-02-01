@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("jammu_and_kashmir.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Satwari Airport");
+                if(r==true)
+                {
+                window.location.replace("form_patnitop.html")
+                }
+                else
+                {
+                window.location.replace("patnitop.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:71%; margin-top:40px;">Patnitop</h1></center>
+             
+            
+            <br><h3 style="margin-left:58%; margin-top:120px;">Surrounded by the majestic, snow-clad mountains  
+                <br>of the Pir Panjal range, lush greenery and 
+                <br>colourful fields, Patnitop, in Jammu and 
+                <br>Kashmir, makes for a lovely getaway. It sits 
+                <br>atop a plateau in the Shivalik belt and remains 
+                <br>shrouded by a thick canopy of green pines and 
+                <br>dense woods. Cut by the pristine Chenab river, 
+                <br>Patnitop has mesmerising natural charms that 
+                <br>leave you awed. It has a number of verdant 
+                <br>valleys and vast, empty fields that are now being 
+                <br>dedicated to camps, making camping one of the most 
+                <br>coveted activities here. </h3>
+                <img src="pat.jpeg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 180px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Sudhmahadev
+                <br>Skyview Patnitop
+                <br>Naag Temple
+                <br>Natha Top
+                <br>Sanasar Lake
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=10auPZx4_iFZMvV58U3l9Lf2NeiFq8--S" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

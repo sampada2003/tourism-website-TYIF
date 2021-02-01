@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("assam.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Lokpriya Gopinath Bordoloi International Airport");
+                if(r==true)
+                {
+                window.location.replace("form_guwahati.html")
+                }
+                else
+                {
+                window.location.replace("guwahati.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:70%; margin-top:40px;">Guwahati</h1></center>
+             
+             
+            
+            <br><h3 style="margin-left:58%; margin-top:120px;">Lying on the southern fringes of the mighty 
+                <br>Brahmaputra river, Guwahati, the largest 
+                <br>city of Assam, holds spirituality and 
+                <br>adventure at its heart. Home to the much 
+                <br>revered Kamakhya Temple, dedicated to mother 
+                <br>goddess Kamakhya, an incarnation of Goddess 
+                <br>Sati, the 8th-century temple attracts devotees 
+                <br>throughout the year.Apart from temples, river 
+                <br>cruising in the feisty Brahmaputra is a magical 
+                <br>experience, with rock climbing at the Elephant 
+                <br>Rocks in Morigaon, about 78 km away, coming a 
+                <br>close second.</h3>
+                <img src="guw.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 180px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Peacock Island
+                <br>Guwahati Planetarium
+                <br>Nehru Park
+                <br>Pobitora Wildlife Sanctuary
+                <br>Nameri National Park And Forest Reserve
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=10aTRG0dBC3ipBjqeMHESvgiyJsGXkRrt" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

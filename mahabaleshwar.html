@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("maharashtra.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Pune Airport");
+                if(r==true)
+                {
+                window.location.replace("form_mahabaleshwar.html")
+                }
+                else
+                {
+                window.location.replace("mahabaleshwar.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:66%; margin-top:40px;">Mahabaleshwar</h1></center>
+             
+            
+            <br><h3 style="margin-left:56%; margin-top:130px;">Snuggled in the beautiful hills and valleys of 
+                <br>the UNESCO World Heritage Site of the Western 
+                <br>Ghats, the town of Mahabaleshwar, in Maharashtra,
+                <br>is a rare blend of surreal beauty interspersed 
+                <br>with colonial charm. Fondly called the Queen of 
+                <br>Sahyadri Hills, Mahabaleshwar boasts narrow lanes 
+                <br>flanked by pretty cottages overlooking verdant valleys;
+                <br>friendly shopkeepers happy to regale you with stories 
+                <br>of old; and the fragrance of strawberries that seems 
+                <br>to permeate every breath – this is what defines the 
+                <br>charm and appeal of Mahabaleshwar. Several breathtaking 
+                <br>vantage points with charming tales attached to them offer 
+                <br>awe-inspiring views of lush mountain scenery.</h3>
+                <img src="mb.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 100px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Rajpuri Caves/ Karthik Caves
+                <br>Lingmala Waterfall Point
+                <br>Morarji castle banglow
+                <br>Falkland Point
+                <br>Sunset Point
+                <br><br><br>Day 2:
+                <br>Connaught Peak
+                <br>Dhobi Waterfall
+                <br>Elephants Head Point
+                <br>Pratapgad
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1Z7qtmuJWP5IQ2guwKFlClarGeNxMq_A9" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,328 @@
+<html>
+    <head>
+        <title>
+            Kaziranga tour booking form
+        </title>
+        <script type="text/javascript">
+        function display()
+        {
+            with(document.form1)
+            {
+                var i=0;
+                
+                if(n1.value.length==0 || r1.value==""||d1.value.length==0||state.value=="choose state"||d5.value.length==0||mob_no.value.length==0||mail.value.length==0 )
+                {
+                    i=1;
+                }
+                else if(n2.value.length>0||n3.value.length>0||n4.value.length>0)
+                {
+                    i=validate();
+                }
+                if(i==0)
+                {
+                alert("Yahoo! Your tour is almost booked Please check your mail for payment details");
+                window.location.replace("kaziranga.html");
+                }
+                else
+                alert("Enter complete details")
+                
+            }
+        }
+        function validate()
+        {
+            with(document.form1)
+            {
+            var j=0;
+            if(n2.value.length>0)
+            {
+                if(r2.value==""||d2.value.length==0)
+                j=1;
+            }
+            if(n3.value.length>0)
+            {
+                if(r3.value==""||d3.value.length==0)
+                j=1;
+            }
+            if(n4.value.length>0)
+            {
+                if(r4.value==""||d4.value.length==0)
+                j=1;
+            }
+            return j;
+            }
+        }
+        function valmail()
+        {
+            with(document.form1)
+            {
+            var j=mail.value.indexOf('@')
+            var k=mail.value.indexOf('.')
+            if(j==-1||k==-1)
+                {
+                    document.getElementById("div1").innerHTML="<br>*Enter valid E-mail";
+                    document.getElementById("div1").style.color="Orange";
+                    document.getElementById("div1").style.fontWeight="700";
+                    mail.focus();
+                    sub.disabled=true;
+                }
+                else
+                {
+                document.getElementById("div1").innerHTML="";
+                sub.disabled=false;
+                }
+                if(mail.value=="")
+                {
+                document.getElementById("div1").innerHTML="";
+                sub.disabled=false;  
+                }
+            }
+        }
+        function valmob()
+        {
+            with(document.form1)
+            {
+                var i=/^[0-9]+$/;
+                if(mob_no.value.length<10||!mob_no.value.match(i))
+                {
+                    document.getElementById("div2").innerHTML="<br>*Enter valid Mobile number";
+                    document.getElementById("div2").style.color="Orange";
+                    document.getElementById("div2").style.fontWeight="700";
+                    mob_no.focus();
+                    sub.disabled=true;
+                }
+                else
+                {
+                document.getElementById("div2").innerHTML="";
+                sub.disabled=false;
+                }
+                if(mob_no.value=="")
+                {
+                document.getElementById("div2").innerHTML="";
+                sub.disabled=false;
+                }
+            }
+        }
+        function redirect()
+        {
+            window.location.replace("kaziranga.html")
+        }
+        function redirect1()
+        {
+            window.location.replace("home.html")
+        }
+        function namecheck()
+        {
+            with(document.form1)
+            {
+                var i=/^[A-Za-z\s]+$/;
+                if(!n1.value.match(i))
+                {
+                    document.getElementById("div3").innerHTML="<br>*Enter Valid Name";
+                    document.getElementById("div3").style.color="Orange";
+                    document.getElementById("div3").style.fontWeight="700";
+                    sub.disabled=true;
+                }
+                else
+                {
+                document.getElementById("div3").innerHTML="";
+                sub.disabled=false;
+                }
+                if(n1.value=="")
+                {
+                document.getElementById("div3").innerHTML="";
+                sub.disabled=false;
+                }
+            }
+        }
+        function namecheck1()
+        {
+            with(document.form1)
+            {
+                var i=/^[A-Za-z\s]+$/;
+                if(!n2.value.match(i))
+                {
+                    document.getElementById("div4").innerHTML="<br>*Enter Valid Name";
+                    document.getElementById("div4").style.color="Orange";
+                    document.getElementById("div4").style.fontWeight="700";
+                    sub.disabled=true;
+                }
+                else
+                {
+                document.getElementById("div4").innerHTML="";
+                sub.disabled=false;
+                }
+                if(n2.value=="")
+                {
+                document.getElementById("div4").innerHTML="";
+                sub.disabled=false;
+                }
+            }
+        }
+        function namecheck2()
+        {
+            with(document.form1)
+            {
+                var i=/^[A-Za-z\s]+$/;
+                if(!n3.value.match(i))
+                {
+                    document.getElementById("div5").innerHTML="<br>*Enter Valid Name";
+                    document.getElementById("div5").style.color="Orange";
+                    document.getElementById("div5").style.fontWeight="700";
+                    sub.disabled=true;
+                }
+                else
+                {
+                document.getElementById("div5").innerHTML="";
+                sub.disabled=false;
+                }
+                if(n3.value=="")
+                {
+                document.getElementById("div5").innerHTML="";
+                sub.disabled=false;
+                }
+            }
+        }
+        function namecheck3()
+        {
+            with(document.form1)
+            {
+                var i=/^[A-Za-z\s]+$/;
+                if(!n4.value.match(i))
+                {
+                    document.getElementById("div6").innerHTML="<br>*Enter Valid Name";
+                    document.getElementById("div6").style.color="Orange";
+                    document.getElementById("div6").style.fontWeight="700";
+                    sub.disabled=true;
+                }
+                else
+                {
+                document.getElementById("div6").innerHTML="";
+                sub.disabled=false;
+                }
+                if(n4.value=="")
+                {
+                document.getElementById("div6").innerHTML="";
+                sub.disabled=false;
+                }
+            }
+        }
+
+        function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    <link rel="stylesheet" type="text/css" href="formcss.css">
+    </head>
+    <body>
+            <div class="regform">
+            <h2><u>Kaziranga Tour Booking</u></h2><br>
+            </div>
+
+            <div class="main">
+            <form  method="POST" name="form1">
+            <b>Full Name:</b> <input type="text" name="n1" size="35" maxlength="100" onkeyup="namecheck()"><div id="div3"></div><br><br>
+            <b>Gender:</b> <input type="radio" name="r1" value="male"> Male
+            <input type="radio" name="r1" value="female"> Female
+            <input type="radio" name="r1" value="others"> Others<br><br>
+            <b>Birth date:</b> <input type="date" name="d1"><br><br><hr><br>
+
+            <h3>Other Group Member Names (Optional):</h3><br>
+
+            <h4>Group Member 1:</h4><br>
+            <b>Full Name:</b> <input type="text" name="n2" size="35" maxlength="100" onkeyup="namecheck1()"><div id="div4"></div><br><br>
+            <b>Gender:</b> <input type="radio" name="r2"> Male
+            <input type="radio" name="r2"> Female
+            <input type="radio" name="r2"> Others<br><br>
+            <b>Birth date:</b> <input type="date" name="d2"><br><br><br><br>
+
+            <h4>Group Member2:</h4><br>
+            <b>Full Name:</b> <input type="text" name="n3" size="35" maxlength="100" onkeyup="namecheck2()"><div id="div5"></div><br><br>
+            <b>Gender:</b> <input type="radio" name="r3"> Male
+            <input type="radio" name="r3"> Female
+            <input type="radio" name="r3"> Others<br><br>
+            <b>Birth date:</b> <input type="date" name="d3"><br><br><br><br>
+
+            <h4>Group Member3:</h4><br>
+            <b>Full Name:</b> <input type="text" name="n4" size="35" maxlength="100" onkeyup="namecheck3()"><div id="div6"></div><br><br>
+            <b>Gender:</b> <input type="radio" name="r4"> Male
+            <input type="radio" name="r4"> Female
+            <input type="radio" name="r4"> Others<br><br>
+            <b>Birth date:</b> <input type="date" name="d4"><br><br><hr><br>
+
+            <b>State/Union Territory you live in:</b>
+            <select name="state" size="1">
+                <optgroup>
+                    <option value="choose state">---Choose State---</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Dadra & Nagar Haveli and Daman & Diu">Dadra & Nagar Haveli and Daman & Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </optgroup>
+            </select><br><br>
+
+
+            <b>Tour Name:</b>
+            <textarea name="txt1" rows="01" cols="45" readonly>
+                Kaziranga Tour
+            </textarea><br><br>
+
+            <b>Date Of Tour:</b><input type="date" name="d5"><br><br>
+
+            <b>Mobile/Telephone Number:</b><input type="text" name="mob_no" maxlength="11" size="11" onkeyup="valmob()"><div id="div2"></div><br><br>
+
+            <b>E-Mail ID:</b><input type="text" name="mail" maxlength="50" size="35" onkeyup="valmail()"><div id="div1"></div>
+            <br><br><br>
+
+             <input type="button" value="submit" name="sub" onclick="display()"> 
+
+           <input type="button" value="Cancle" onclick="redirect()">
+
+           <input type="button" value="Home" onclick="redirect1()">
+
+
+        </div>
+        </form>
+    </body>
+</html>

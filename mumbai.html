@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("maharashtra.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Mumbai Airport");
+                if(r==true)
+                {
+                window.location.replace("form_mumbai.html")
+                }
+                else
+                {
+                window.location.replace("mumbai.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:70%; margin-top:40px;">Mumbai</h1></center>
+            <br><h3 style="margin-left:54%; margin-top:130px;">Mumbai, the capital of Maharashtra, attracts dreamers with 
+                <br>sky-high ambitions from every corner of the country. 
+                <br>It is a unique place where the past is mixed with the future 
+                <br>and history meets modernity, a city that lies at the cross 
+                <br>section of business and entertainment and beats to a 
+                <br>pulsating rhythm of its own. Located by the Arabian Sea,
+                <br>Mumbai is an amalgamation of heritage and culture and glitz 
+                <br>and glamour. So from historic art deco buildings, which are 
+                <br>recognised by the UNESCO, to plush new-age homes of the 
+                <br>super rich, Mumbai has it all!  </h3>
+                <img src="maha.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 100px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Gateway Of India
+                <br>Taj Mahal Tower
+                <br>Chhatrapati Shivaji Maharaj Vastu Sangrahalaya
+                <br>Marine Lines
+                <br>Taraporewala Aquarium
+                <br><br><br>Day 2:
+                <br>Nehru Science Centre
+                <br>Worli
+                <br>Shree Siddhivinayak Ganapati Temple 
+                <br>Juhu Beach
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1L01oB-2OOD2TYuJRc27zKofj9D0ub1Rm" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

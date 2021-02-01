@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="state.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script type="text/javascript">
+         function redirect(name)
+        {
+          value=name;
+          window.location.replace(name+".html")
+        }
+
+        function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <h2 style="margin-left:16%;">Assam</h2>
+                    
+        <br><br><h4 style="margin-top:180px;">Termed as the land of “Blue Hills and Red River” Assam is 
+                <br>the gateway to the north eastern states and has been aptly 
+                <br>described as the sentinel of Northeast India. Seven Indian 
+                <br>States and two countries Bhutan and Bangladesh, surround 
+                <br>Assam which is also close to India’s international borders 
+                <br>with China and Myanmar.
+                <br>Assam is surrounded by hills, major rivers such as 
+                <br>Brahmaputra & Barak and its tributaries, thick forest, 
+                <br>tea gardens which enhances the scenic beauty of Assam. 
+                <br>Infact the mighty Brahmaputra river of Assam is the only male
+                <br>river in the country.</h4>
+                <a href="#destination"><input type="button" name="explore" value="Click To View Popular Destinations"></a>
+            <center><img src="assam1.jpg" width="90%" height="90%"></center>
+        </div>
+        <span id="destination">
+        <div class="row" style="padding-left:140px; background-color:rgb(46, 46, 46);">
+            <br><h1 style="margin-left:350px; color:aliceblue">Popular Destinations</h1>
+            <div class="column">
+                <img src="kaziranga.jpg" onclick="redirect(name)" name="kaziranga">
+                <h3>Kaziranga</h3>
+                <h4>Per Person=Rs.7,500</h4>  
+            </div>
+            <div class="column">
+              <img src="guwahati.jpg" onclick="redirect(name)" name="guwahati">
+              <h3>Guwahati</h3>
+              <h4>Per Person=Rs.5,000</h4> 
+            </div>
+            <div class="column">
+              <img src="tezpur.jpg" onclick="redirect(name)" name="tezpur">
+              <h3>Tezpur</h3>
+              <h4>Per Person=Rs.4,000</h4>
+            </div>
+            </div>
+        </span>
+    </body>
+</html>

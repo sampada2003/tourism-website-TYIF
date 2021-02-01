@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="destination.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@100&display=swap" rel="stylesheet">
+        
+        <script type="text/javascript">
+            
+            function display()
+            {
+                window.location.replace("karnataka.html")
+            }
+
+            function display1()
+            {
+                var r= confirm("Note: The pick-up point of this tour will be Hubli Airport");
+                if(r==true)
+                {
+                window.location.replace("form_hampi.html")
+                }
+                else
+                {
+                window.location.replace("hampi.html")
+                }
+            }
+
+            function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <center><h1 style="margin-left:71%; margin-top:40px;">Hampi</h1></center>
+            
+            
+            <br><h3 style="margin-left:55%; margin-top:130px;">A legendary lost city that was once the powerhouse
+                <br>of an ancient kingdom and an auspicious temple town 
+                <br>standing on the banks of the mighty Tungabhadra river, 
+                <br>history and mythology come to life in Hampi, Karnataka. 
+                <br>A queen's bath, a spectacular Lotus Palace, a royal 
+                <br>stable or a temple, which is said to have been the 
+                <br>place where the wedding of Lord Shiva and Goddess Parvati 
+                <br>took place, this UNESCO World Heritage site reveals a 
+                <br>facet of history at every turn.</h3>
+                <img src="ha.jpg" width="50%" height="100%">
+        </div>
+            
+        <div class="container1">
+            <center><h1 style="margin-left: 18%; margin-top:20px;">About Tour</h1></center>
+            <br><h3 style="color: aliceblue; margin-top: 100px; margin-left: 30px; position: absolute;">Day 1:
+                <br>Hampi Archeological Museum
+                <br>Queen's bath place
+                <br>Stepped Tank
+                <br>Elephant's Stables
+                <br>Lotus mahal
+                <br><br><br>Day 2:
+                <br>Matanga Hill
+                <br>Hippie island
+                <br>Vijaya Vitthala Temple 
+                <br>Gagan Mahal
+            </h3>
+            <br><input type="button" name="back" value="Previous Page" onclick="display()">
+            <button name="register" value="Register" onclick="display1()"> Register Tour</button>
+            <iframe src="https://www.google.com/maps/d/embed?mid=1QdFni_gjDnc9vObDPV47MKtwqA-YC3Lz" width="50%" height="590"></iframe>
+        </div>
+    </body>
+</html>

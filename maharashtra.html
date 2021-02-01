@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="state.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script type="text/javascript">
+         function redirect(name)
+        {
+          value=name;
+          window.location.replace(name+".html")
+        }
+
+        function display3()
+            {
+                alert('Security Violation');
+                return false
+            }
+            function browser()
+            {
+                if(event.button==2)
+                {
+                    display3()
+                    return false
+                }
+            }
+            document.oncontextmenu=new Function("display3();return false")
+        </script>
+    </head>
+    <body>
+        <ul>   <!-- start of the navbar -->
+            <a href="home.html"><img src="logo4.png"></a>
+            <li><a href="home.html#about">About</a></li>
+            <li><a href="signup.html">Sign-Up</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href="home.html">Home</a></li>
+        </ul>  <!-- end of the navbar -->
+        <div class="container">
+            <h2>Maharashtra</h2>
+        <br><br><h4>The spirit of Maharashtra is cosmopolitan, forward-thinking, 
+                <br>tolerant and vibrant.There is enough to keep connoisseurs of 
+                <br>temples, forts, old monuments and art- gainfully preoccupied 
+                <br>here. Forts have played a vital role in the history of the 
+                <br>state, given the rocky terrain of the Sahyadris. Each fort 
+                <br>marks a military triumph,and each tells a story of strategy,
+                <br>warfare, intrigue and planning. All of them reconstruct the 
+                <br>tale of an enterprising leader, Chhatrapati Shivaji-in the 
+                <br>Deccan arena, who with fortitude went onto become one of 
+                <br>the tallest kings of Indian history.</h4>
+                <a href="#destination"><input type="button" name="explore" value="Click To View Popular Destinations"></a>
+            <center><img src="maha3.jpg" width="90%" height="90%"></center>
+        </div>
+        <span id="destination">
+        <div class="row" style="padding-left:140px; background-color:rgb(46, 46, 46);">
+            <br><h1 style="margin-left:350px; color:aliceblue">Popular Destinations</h1>
+            <div class="column">
+                <img src="mumbai.jpg" onclick="redirect(name)" name="mumbai">
+                <h3>Mumbai</h3>
+                <h4>Per Person=Rs.5,000</h4>  
+            </div>
+            <div class="column">
+              <img src="aurangabad.jpg" onclick="redirect(name)" name="aurangabad">
+              <h3>Aurangabad</h3>
+              <h4>Per Person=Rs.6,000</h4> 
+            </div>
+            <div class="column">
+              <img src="mahabaleshwar.jpg" onclick="redirect(name)" name="mahabaleshwar">
+              <h3>Mahabaleshwar</h3>
+              <h4>Per Person=Rs.8,000</h4>
+            </div>
+            </div>
+        </span>
+    </body>
+</html>
